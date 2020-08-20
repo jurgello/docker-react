@@ -12,5 +12,6 @@ RUN npm install
 
 COPY . .
 
-# CMD tail -f /dev/null
+#CMD tail -f /dev/null
+# docker run -e CI=true jurgello/docker-react npm run test -- --coverage
 CMD ["npm", "run", "start"]
