@@ -1,0 +1,16 @@
+FROM node:alpine
+
+RUN npm install -g create-react-app
+
+WORKDIR '/app'
+
+#RUN create-react-app frontend
+
+COPY package.json .
+
+RUN npm install
+
+COPY . .
+
+# CMD tail -f /dev/null
+CMD ["npm", "run", "start"]
